@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            margin: 0;
+            height: 100%;
+        }
+        .todo{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .cabecera{
+            background-color: chartreuse;
+            z-index: 45;
+        }
+        .cuerpo{
+            background-color: darkmagenta;
+            flex: 1;
+            display: flex;
+        }
+        .parte1{
+            background-color: crimson;
+            flex: .2;
+            position: relative;
+        }
+        .card-content{
+            overflow: scroll;
+            position: absolute;
+            inset-inline-end: 0;
+            inset-inline-start: 0;
+            inset-block-end: 0;
+            inset-block-start: 0;
+            
+        }
+        .card-content::-webkit-scrollbar{
+            display: none;
+        }
+        .parte2{
+            background-color:cyan;
+            flex: 1;
+            position: relative;
+        }
+        .card{
+            height: 340px;
+            background-color: darkslategray;
+        }
+        .parte2-contenido{
+            overflow: scroll;
+            position: absolute;
+            inset-inline-end: 0;
+            inset-inline-start: 0;
+            inset-block-end: 0;
+            inset-block-start: 0;
+        }
+        .parte2-contenido::-webkit-scrollbar{
+            display: none;
+        }
+        .card2{
+            width: 100%;
+            background-color: chartreuse;
+            overflow: auto;
+        }
+        .card2::-webkit-scrollbar{
+            display: none;
+        }
+        .list{
+            display: flex;
+            background-color: rgb(63, 10, 10);
+            width: 2200px;
+            gap: 20px;
+        }
+        .item1,.item2,.item3,.item4,.item5,.item6{
+            width: 500px;
+            height: 100px;
+            background-color: darkgoldenrod;
+        }
+        .footer{
+            height: 56px;
+            background-color: rgb(212, 114, 114);
+        }
+    </style>
+</head>
+<body>
+    <div class="todo">
+        <div class="cabecera">cabecera</div>
+        <div class="cuerpo">
+            <div class="parte1">
+                <div class="card-content">
+                    <div class="card">parte1</div>
+                    <div class="card">parte1</div>
+                    <div class="card">parte1</div>
+                </div>
+            </div>
+            <div class="parte2">
+                <div class="parte2-contenido">
+                    <div class="card">1</div>
+                    <div class="card2">
+                        <div class="list">
+                            <div class="item1">item1</div>
+                            <div class="item2">item2</div>
+                            <div class="item3">item3</div>
+                            <div class="item4">item4</div>
+                            <div class="item5">item5</div>
+                            <div class="item6">item6</div>
+                        </div>
+                    </div>
+                    <div class="card">3</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
